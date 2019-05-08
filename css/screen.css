@@ -461,11 +461,14 @@ a:focus {
     right: 0;
     left: 0;
     height: 100vh;
-    display: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s;
 }
 
 .has-mobile-nav .c-mobile-nav {
-    display: block;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .c-mobile-nav__header {
