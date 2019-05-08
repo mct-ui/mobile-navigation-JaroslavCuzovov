@@ -461,13 +461,25 @@ a:focus {
     right: 0;
     left: 0;
     height: 100vh;
-    opacity: 0;
+    transform: translateX(-100%);
+
     pointer-events: none;
-    transition: opacity .25s;
+    transition: transform .25s;
 }
 
 .has-mobile-nav .c-mobile-nav {
-    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+.has-mobile-nav .c-page {
+    transform: translateX(50%);
+    pointer-events: none;
+}
+
+.c-page {
+    transform: translateX(0);
+    transition: transform .25s;
     pointer-events: auto;
 }
 
@@ -479,11 +491,14 @@ a:focus {
 }
 
 .c-mobile-nav__bg {
-
+    opacity: 0;
+    pointer-events: none;
 }
 
 .has-mobile-nav .c-mobile-nav__bg {
-
+    opacity: 0.5;
+    transition: opacity .25s;
+    pointer-events: auto;
 }
 
 .c-mobile-nav__body {
